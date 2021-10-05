@@ -6,9 +6,13 @@
         <button class="btn btn-success" @click="startGame">start</button>
       </div>
     </div>
-    <div class="bg-white">
-      <div v-for="r in rowsGame" :key="r" class="col d-flex">
-        <div v-for="c in colsGame" :key="c" class="cube border border-dark" :class="{ 'bg-dark' : isAlive(r, c) }" ></div> 
+    <div class="row">
+      <div class="col-12 d-flex justify-content-center">
+        <div class="bg-custom">
+          <div v-for="r in rowsGame" :key="r" class="col d-flex">
+            <div v-for="c in colsGame" :key="c" class="cube border border-dark" :class="{ 'bg-cell' : isAlive(r, c) }" ></div> 
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -20,8 +24,8 @@ export default {
   data(){
     return{
       matrix : new Map(),
-      rowsGame: 30,
-      colsGame: 30
+      rowsGame: 90,
+      colsGame: 25
     }
   },
   mounted(){
@@ -88,5 +92,14 @@ export default {
   .cube{
     height: 15px;
     width: 15px;
+  }
+  .bg-custom{
+    background-image: url('./../../public/glass.png');
+    background-position: center;
+    background-repeat: repeat;
+    background-size: cover;
+  }
+  .bg-cell{
+    background-color: rgb(101, 99, 99);
   }
 </style>
