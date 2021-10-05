@@ -77,7 +77,7 @@ export default {
     startGame(){
       setInterval(() => {
           this.nextTicket()
-      }, 100);
+      }, 300);
     }
   }
 }
