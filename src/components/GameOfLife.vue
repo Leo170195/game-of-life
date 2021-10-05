@@ -94,10 +94,7 @@ export default {
     width: 5px;
   }
   .bg-custom{
-    background-image: url('./../../public/glass.png');
-    background-position: center;
-    background-repeat: repeat;
-    background-size: cover;
+    background-color: white;
   }
   .bg-cell{
     background-color: rgb(101, 99, 99);
