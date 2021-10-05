@@ -86,7 +86,7 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
   .cube{
-    height: 5px;
-    width: 5px;
+    height: 15px;
+    width: 15px;
   }
 </style>
