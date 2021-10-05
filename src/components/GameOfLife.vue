@@ -24,7 +24,7 @@ export default {
   data(){
     return{
       matrix : new Map(),
-      rowsGame: 90,
+      rowsGame: 60,
       colsGame: 25
     }
   },
