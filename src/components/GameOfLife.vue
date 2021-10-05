@@ -24,8 +24,8 @@ export default {
   data(){
     return{
       matrix : new Map(),
-      rowsGame: 60,
-      colsGame: 25
+      rowsGame: 180,
+      colsGame: 75
     }
   },
   mounted(){
@@ -90,8 +90,8 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
   .cube{
-    height: 15px;
-    width: 15px;
+    height: 5px;
+    width: 5px;
   }
   .bg-custom{
     background-image: url('./../../public/glass.png');
