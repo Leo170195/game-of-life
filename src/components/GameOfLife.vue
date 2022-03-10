@@ -10,7 +10,7 @@
       <div class="col-12 d-flex justify-content-center">
         <div class="bg-custom">
           <div v-for="r in rowsGame" :key="r" class="col d-flex">
-            <div v-for="c in colsGame" :key="c" class="cube border border-dark" :class="{ 'bg-cell' : isAlive(r, c) }" ></div> 
+            <div v-for="c in colsGame" :key="c" class="cube rounded-pill" :class="{ 'bg-cell-alive' : isAlive(r, c), 'bg-cell-death' : !isAlive(r, c) }" ></div> 
           </div>
         </div>
       </div>
@@ -24,8 +24,8 @@ export default {
   data(){
     return{
       matrix : new Map(),
-      rowsGame: 130,
-      colsGame: 75
+      rowsGame: 30,
+      colsGame: 50
     }
   },
   mounted(){
@@ -90,13 +90,39 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
   .cube{
-    height: 5px;
-    width: 5px;
+    height: 30px;
+    width: 30px;
   }
   .bg-custom{
     background-color: white;
   }
-  .bg-cell{
-    background-color: rgb(101, 99, 99);
+  .bg-cell-death{
+    /* background-color: rgb(101, 99, 99); */
+    background-image: url('./../../public/death.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  .bg-cell-alive{
+    /* background-color: rgb(101, 99, 99); */
+    background-image: url('./../../public/alive.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  .svg-icon {
+    width: 1em;
+    height: 1em;
+  }
+
+  .svg-icon path,
+  .svg-icon polygon,
+  .svg-icon rect {
+    fill: #4691f6;
+  }
+
+  .svg-icon circle {
+    stroke: #4691f6;
+    stroke-width: 1;
   }
 </style>
