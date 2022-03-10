@@ -24,8 +24,8 @@ export default {
   data(){
     return{
       matrix : new Map(),
-      rowsGame: 30,
-      colsGame: 50
+      rowsGame: 80,
+      colsGame: 100
     }
   },
   mounted(){
